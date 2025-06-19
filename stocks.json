@@ -1,0 +1,212 @@
+[
+    {
+        "product_id": 1,
+        "product_name": "Mechanical Keyboard",
+        "product_price": 4500,
+        "product_description": "RGB backlit mechanical keyboard with blue switches",
+        "product_quantity": 57
+    },
+    {
+        "product_id": 2,
+        "product_name": "Gaming Mouse",
+        "product_price": 3200,
+        "product_description": "High DPI wired gaming mouse with customizable buttons",
+        "product_quantity": 68
+    },
+    {
+        "product_id": 3,
+        "product_name": "Graphics Card",
+        "product_price": 98000,
+        "product_description": "NVIDIA RTX 3060 Ti with 8GB GDDR6 memory",
+        "product_quantity": 32
+    },
+    {
+        "product_id": 4,
+        "product_name": "SSD 1TB",
+        "product_price": 11000,
+        "product_description": "1TB NVMe M.2 SSD for high-speed performance",
+        "product_quantity": 52
+    },
+    {
+        "product_id": 5,
+        "product_name": "External Hard Drive",
+        "product_price": 9500,
+        "product_description": "2TB portable external hard disk USB 3.0",
+        "product_quantity": 55
+    },
+    {
+        "product_id": 6,
+        "product_name": "Wireless Mouse",
+        "product_price": 1800,
+        "product_description": "Bluetooth ergonomic wireless mouse",
+        "product_quantity": 53
+    },
+    {
+        "product_id": 7,
+        "product_name": "Laptop Stand",
+        "product_price": 2500,
+        "product_description": "Adjustable aluminum laptop stand with cooling",
+        "product_quantity": 39
+    },
+    {
+        "product_id": 8,
+        "product_name": "Webcam",
+        "product_price": 3500,
+        "product_description": "Full HD 1080p USB webcam with microphone",
+        "product_quantity": 63
+    },
+    {
+        "product_id": 9,
+        "product_name": "Microphone",
+        "product_price": 4200,
+        "product_description": "Condenser microphone for streaming and podcasting",
+        "product_quantity": 32
+    },
+    {
+        "product_id": 10,
+        "product_name": "Monitor 24\"",
+        "product_price": 28000,
+        "product_description": "24-inch 144Hz full HD gaming monitor",
+        "product_quantity": 56
+    },
+    {
+        "product_id": 11,
+        "product_name": "Mechanical Pencil",
+        "product_price": 350,
+        "product_description": "Stylish mechanical pencil with precision tip",
+        "product_quantity": 46
+    },
+    {
+        "product_id": 12,
+        "product_name": "USB Hub",
+        "product_price": 1500,
+        "product_description": "4-port USB 3.0 hub with data transfer support",
+        "product_quantity": 40
+    },
+    {
+        "product_id": 13,
+        "product_name": "Gaming Chair",
+        "product_price": 34000,
+        "product_description": "Ergonomic high-back gaming chair with recline",
+        "product_quantity": 37
+    },
+    {
+        "product_id": 14,
+        "product_name": "Gaming Desk",
+        "product_price": 27000,
+        "product_description": "Sturdy gaming desk with RGB and cable management",
+        "product_quantity": 62
+    },
+    {
+        "product_id": 15,
+        "product_name": "Router",
+        "product_price": 8700,
+        "product_description": "Dual band Wi-Fi 6 router with MU-MIMO",
+        "product_quantity": 69
+    },
+    {
+        "product_id": 16,
+        "product_name": "Bluetooth Speaker",
+        "product_price": 2900,
+        "product_description": "Portable Bluetooth speaker with deep bass",
+        "product_quantity": 60
+    },
+    {
+        "product_id": 17,
+        "product_name": "Smart Watch",
+        "product_price": 12500,
+        "product_description": "Fitness smartwatch with heart rate monitor",
+        "product_quantity": 65
+    },
+    {
+        "product_id": 18,
+        "product_name": "Tablet",
+        "product_price": 39000,
+        "product_description": "10.5-inch Android tablet with stylus support",
+        "product_quantity": 62
+    },
+    {
+        "product_id": 19,
+        "product_name": "Laptop Cooler",
+        "product_price": 2100,
+        "product_description": "Cooling pad with 5 fans for gaming laptops",
+        "product_quantity": 67
+    },
+    {
+        "product_id": 20,
+        "product_name": "VR Headset",
+        "product_price": 60000,
+        "product_description": "Virtual Reality headset with motion controllers",
+        "product_quantity": 37
+    },
+    {
+        "product_id": 21,
+        "product_name": "Smartphone Gimbal",
+        "product_price": 9900,
+        "product_description": "3-axis gimbal stabilizer for smartphones",
+        "product_quantity": 66
+    },
+    {
+        "product_id": 22,
+        "product_name": "Drawing Tablet",
+        "product_price": 15500,
+        "product_description": "Digital drawing pad for designers and artists",
+        "product_quantity": 53
+    },
+    {
+        "product_id": 23,
+        "product_name": "Action Camera",
+        "product_price": 18900,
+        "product_description": "4K waterproof action camera with accessories",
+        "product_quantity": 67
+    },
+    {
+        "product_id": 24,
+        "product_name": "Smart Light",
+        "product_price": 1200,
+        "product_description": "RGB Wi-Fi smart LED bulb with mobile app",
+        "product_quantity": 30
+    },
+    {
+        "product_id": 25,
+        "product_name": "Keyboard Cleaner",
+        "product_price": 600,
+        "product_description": "Portable air blower and brush for keyboards",
+        "product_quantity": 59
+    },
+    {
+        "product_id": 26,
+        "product_name": "USB Flash Drive",
+        "product_price": 1000,
+        "product_description": "128GB USB 3.1 flash drive",
+        "product_quantity": 54
+    },
+    {
+        "product_id": 27,
+        "product_name": "Wireless Charger",
+        "product_price": 3500,
+        "product_description": "Fast wireless charger pad for phones",
+        "product_quantity": 35
+    },
+    {
+        "product_id": 28,
+        "product_name": "Cable Organizer",
+        "product_price": 400,
+        "product_description": "Magnetic cable management system",
+        "product_quantity": 32
+    },
+    {
+        "product_id": 29,
+        "product_name": "Ethernet Switch",
+        "product_price": 5600,
+        "product_description": "8-port gigabit switch for LAN expansion",
+        "product_quantity": 61
+    },
+    {
+        "product_id": 30,
+        "product_name": "Headphones",
+        "product_price": 4600,
+        "product_description": "Over-ear noise-canceling Bluetooth headphones",
+        "product_quantity": 41
+    }
+]
