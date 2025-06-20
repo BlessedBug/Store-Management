@@ -7,7 +7,7 @@ class CURD:
     def __init__(self, name="BlessedBug", password="#Blessed404"):
         self.name = name
         self.password = password
-        self.stock_path = "/home/danzo/Documents/github/stock.json"
+        self.stock_path = "/home/danzo/Documents/github/stocks.json"
         self.log_path = "/home/danzo/Documents/github/timestamps.txt"
 
     def __enter__(self):
@@ -218,24 +218,79 @@ class CURD:
 
 class Customer:
     def __init__(self):
-        self.stock_path = "/home/danzo/Documents/github/stock.json"
+        self.stock_path = "/home/danzo/Documents/github/stocks.json"
         self.log_path = "/home/danzo/Documents/github/timestamps.txt"
         self.cu_list = []
+        self.price_list = []
         self.customer_id = str(uuid.uuid4())[:8]
 
-    def view_products(self):
+    def welcome(self):
+        print("Welcome to Techies")
+
         try:
-            with open(self.stock_path, 'r') as stock_file:
-                products = json.load(stock_file)
+            with open(self.stock_path, "r") as rfile:
+                stocks = json.load(rfile)
         except (FileNotFoundError, json.JSONDecodeError):
-            print("Unable to read stock file")
+            print("Unable to load stock file.")
             return
 
         print("\nAvailable Products:")
-        for product in products:
-            print(f"{product['product_id']} - {product['product_name']} - {product['product_price']} PKR")
+        for product in stocks:
+            print(f"{product['product_id']} - {product['product_name']} - {product['product_price']} PKR - In Stock: {product['product_quantity']}")
 
-# Entry point to control user selection
+        while True:
+            cu_input = input("Choose a product by product name or product id (or press Enter to return): ").strip()
+            if cu_input == "":
+                break
+
+            for product in stocks:
+                if str(product["product_id"]) == cu_input or product["product_name"].lower() == cu_input.lower():
+                    try:
+                        qty = int(input(f"Enter quantity (Available: {product['product_quantity']}): "))
+                        if qty <= 0 or qty > product['product_quantity']:
+                            print("Invalid quantity.")
+                            continue
+                        product_copy = product.copy()
+                        product_copy["selected_quantity"] = qty
+                        self.cu_list.append(product_copy)
+                        self.price_list.append(product["product_price"] * qty)
+                        print(f"Added: {product['product_name']} x {qty}")
+                    except ValueError:
+                        print("Invalid input. Quantity must be a number.")
+                    break
+            else:
+                print("Product not found.")
+
+    def checkout(self):
+        print("\nYour Cart:")
+        for product in self.cu_list:
+            print(f"{product['product_name']} - {product['product_price']} x {product['selected_quantity']}")
+
+        total = sum(self.price_list)
+        print(f"Total Bill: {total} PKR")
+        return total
+
+    def check(self):
+        total = self.checkout()
+        try:
+            payment = int(input("Enter payment amount: "))
+        except ValueError:
+            print("Invalid amount")
+            return
+
+        if payment >= total:
+            balance = payment - total
+            print(f"Payment successful. Your balance: {balance} PKR")
+            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            try:
+                with open(self.log_path, 'a') as log_file:
+                    for product in self.cu_list:
+                        log_file.write(
+                            f"{timestamp} | customer_id: {self.customer_id} bought {product['selected_quantity']}x product_id: {product['product_id']}, name: {product['product_name']}, price: {product['product_price']}\n")
+            except FileNotFoundError:
+                print("Log file not found")
+        else:
+            print("Insufficient amount. Payment failed.")
 
 def main():
     print("Welcome to Inventory System")
@@ -249,7 +304,8 @@ def main():
 
     if choice == "1":
         customer = Customer()
-        customer.view_products()
+        customer.welcome()
+        customer.check()
     elif choice == "2":
         try:
             username = input("Enter Admin Username: ")
